@@ -14,7 +14,7 @@ COPY target/*.jar app.jar
 COPY wallets /app/wallets
 
 # 4. Exponemos el puerto de tu backend
-EXPOSE 8082
+EXPOSE 8084
 
 # Se activa el perfil "docker" para usar application-docker.properties
 ENTRYPOINT ["java", "-Dspring.profiles.active=docker", "-jar", "app.jar"]
