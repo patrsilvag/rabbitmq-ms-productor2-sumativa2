@@ -21,8 +21,8 @@ public class ProductorScheduler {
     private final CtrlProcesosRepository ctrlProcesosRepository;
     private final RabbitTemplate rabbitTemplate;
 
-   // @Scheduled(cron = "0 */5 * * * *") // cada 5 minutos
-    @Scheduled(cron = "*/120 * * * * *") // cada 120 segundos
+    @Scheduled(cron = "0 */5 * * * *") // cada 5 minutos
+   // @Scheduled(cron = "*/120 * * * * *") // cada 120 segundos
     public void enviarResumen() {
 
         CtrlProcesos proceso = ctrlProcesosRepository.findById("RESUMEN_ALERTAS").orElseThrow(
